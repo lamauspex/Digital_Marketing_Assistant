@@ -12,7 +12,7 @@ from confic.response_generator import *
 # Настройка логирования
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-model_name = 'Model_results/fine_tuned_model/content/model_path/fine_tuned_model'
+model_name = 'Model_name'
 
 class MarketingAssistant:
     """Инициализация ассистента с загрузкой модели и токенизатора."""
