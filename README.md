@@ -1,8 +1,8 @@
 # Digital Marketing Assistant
 
 <div style="display: flex; align-items: center;">
-    <img src="![resizedimage](https://github.com/user-attachments/assets/bc130e81-7605-4007-9664-ec144d62adac)
-" alt="Приветствую вас! Я Полина, ваш нейро маркетолог. Моя цель — помочь вашему бизнесу расти. Давайте вместе создадим эффективные стратегии и достигнем новых высот!" style="max-width: 200px; margin-right: 20px;">
+    <img src="[https://github.com/user-attachments/assets/bc130e81-7605-4007-9664-ec144d62adac](https://github.com/lamauspex/Digital_Marketing_Assistant/blob/master/resizedimage.jpg)" alt="Приветствую вас! Я Полина, ваш нейро маркетолог. Моя цель — помочь вашему бизнесу расти. Давайте вместе создадим эффективные стратегии и достигнем новых высот!" style="max-width: 200px; margin-right: 20px;">
+</div>
     <div>
         <h2></h2>
         <p></p>
