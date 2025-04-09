@@ -1,6 +1,5 @@
 # Digital Marketing Assistant
-
-![Logo](https://vk.com/photo821188484_456239039)
+![1744212889468-985](https://github.com/user-attachments/assets/9e253534-f276-450e-acf9-d76de3047cf1)
 
 ## Описание проекта
 
