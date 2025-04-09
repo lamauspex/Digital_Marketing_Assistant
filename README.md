@@ -1,6 +1,6 @@
 # Digital Marketing Assistant
 
-![Logo]([https://via.placeholder.com/150](https://heybro.ai/uploads/i/2025-04-09/1744212889468-985.jpg))
+![Logo](https://vk.com/photo821188484_456239039)
 
 ## Описание проекта
 
