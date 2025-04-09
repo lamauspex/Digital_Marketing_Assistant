@@ -1,6 +1,12 @@
 # Digital Marketing Assistant
 
-![Logo](https://via.placeholder.com/150) <!-- Замените на ваше изображение -->
+<div style="display: flex; align-items: center;">
+    <img src="c:\Users\pmokr\Downloads\resizedimage.jpg" alt="Приветствую вас! Я Полина, ваш нейро маркетолог. Моя цель — помочь вашему бизнесу расти. Давайте вместе создадим эффективные стратегии и достигнем новых высот!" style="max-width: 200px; margin-right: 20px;">
+    <div>
+        <h2>Заголовок</h2>
+        <p>Ваше описание здесь.</p>
+    </div>
+</div>
 
 ## Описание проекта
 
@@ -31,21 +37,22 @@
 Чтобы запустить проект на своем компьютере, выполните следующие шаги:
 
 1. Клонируйте репозиторий:
-
+git clone https://github.com/lamauspex/digital_marketing_assistant.git
+cd digital_marketing_assistant
 
 2. Установите необходимые библиотеки:
 
 pip install -r requirements.txt
 
-3. Выполните обучение модели
+3. Обучите модель: Запустите скрипт для обучения модели:
 
-Training_model.py
+python Training_model.py
 
-Запустите приложение:
+4. Запустите приложение:
 
 python main.py
 
-4. Использование
+5. Использование
 После запуска приложения вы можете вводить команды в терминале для получения информации. Например:
 
 Определение терминов: "Определение SEO"

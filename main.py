@@ -1,3 +1,4 @@
+import os
 import re
 import logging
 import requests
@@ -11,10 +12,11 @@ from confic.response_generator import *
 # Настройка логирования
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+model_name = 'Model_results/fine_tuned_model/content/model_path/fine_tuned_model'
 
 class MarketingAssistant:
     """Инициализация ассистента с загрузкой модели и токенизатора."""
-    def __init__(self, model_name = 'Model_results/fine_tuned_model/content/model_path/fine_tuned_model'):
+    def __init__(self, model_name = model_name):
         self.model_name = model_name
         try:
             self.tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -29,9 +31,13 @@ class MarketingAssistant:
 
     """Загрузка простых ответов из CSV файла и возвращение их в виде словаря."""
     def load_simple_responses(self):
-        responses_df = pd.read_csv('data/simple_responses.csv')
-        logging.info("Простые ответы загружены из файла.")
-        return dict(zip(responses_df['input'], responses_df['response']))
+        try:
+            responses_df = pd.read_csv('data/simple_responses.csv')
+            logging.info("Простые ответы загружены из файла.")
+            return dict(zip(responses_df['input'], responses_df['response']))
+        except Exception as e:
+            logging.error(f"Ошибка при загрузке простых ответов: {e}")
+            return {}
 
     """Функции для сохранения обратной связи"""
     def request_feedback(self, user_input, response):
@@ -59,10 +65,13 @@ class MarketingAssistant:
     """Загрузка данных из CSV файлов для терминов, стратегий и кейсов."""
     def load_data_from_self(self):
         # Загрузка данных из файлов
-        self.terms = load_data('data/terms.csv')
-        self.strategies = load_data('data/strategies.csv')
-        self.cases = load_data('data/cases.csv')
-        logging.info("Данные загружены из файлов.")
+        try:
+            self.terms = load_data('data/terms.csv')
+            self.strategies = load_data('data/strategies.csv')
+            self.cases = load_data('data/cases.csv')
+            logging.info("Данные загружены из файлов.")
+        except Exception as e:
+            logging.error(f"Ошибка при загрузке данных: {e}")
     
     """Проверка безопасности"""
     def is_safe_query(self, query):
@@ -125,8 +134,6 @@ class MarketingAssistant:
             if any(keyword in term.lower() for keyword in key_words):
                 relevant_info.append(term)
                 
-        # Вы можете добавить дополнительные проверки для других категорий (strategies, cases, etc.)
-
         return ", ".join(relevant_info) if relevant_info else None
 
 
@@ -189,7 +196,6 @@ class MarketingAssistant:
                        
         else:
             results = (semantic_search(term, self.terms['term'].tolist()))[:5]
-            #top_results = results[:5]
             return "Нет данных. Похожие термины: " + ", ".join([similar_term for similar_term, _ in results])
 
         
@@ -221,9 +227,9 @@ class MarketingAssistant:
     
     """Функция для генерации ответа с использованием модели машинного обучения"""
     def generate_response(self, user_input):
-        # Проверяем, что user_input является тензором
+        # Проверяем, что user_input является тензором и извлекаем данные из тензора
         if isinstance(user_input, torch.Tensor):
-            user_input = user_input.squeeze().tolist()  # Извлекаем данные из тензора
+            user_input = user_input.squeeze().tolist()  
         
         # Если user_input - это список, создаем строку
         if isinstance(user_input, list):
