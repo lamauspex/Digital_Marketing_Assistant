@@ -1,0 +1,3 @@
+
+VERSION = '1.0.0'
+RELEASE_DATE = '2023-10-01'
