@@ -1,10 +1,10 @@
 # Digital Marketing Assistant
 
 <div style="display: flex; align-items: center;">
-    <img src="c:\Users\pmokr\Downloads\resizedimage.jpg" alt="Приветствую вас! Я Полина, ваш нейро маркетолог. Моя цель — помочь вашему бизнесу расти. Давайте вместе создадим эффективные стратегии и достигнем новых высот!" style="max-width: 200px; margin-right: 20px;">
+    <img src="./confic/logo/resizedimage.jpg" alt="Приветствую вас! Я Полина, ваш нейро маркетолог. Моя цель — помочь вашему бизнесу расти. Давайте вместе создадим эффективные стратегии и достигнем новых высот!" style="max-width: 200px; margin-right: 20px;">
     <div>
-        <h2>Заголовок</h2>
-        <p>Ваше описание здесь.</p>
+        <h2></h2>
+        <p></p>
     </div>
 </div>
 
