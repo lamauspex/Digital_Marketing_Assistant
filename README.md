@@ -1,5 +1,10 @@
 # Digital Marketing Assistant
 
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=flat&logo=python)
+![GPT-2](https://img.shields.io/badge/GPT--2-Fine--tuned-orange)
+![LangChain](https://img.shields.io/badge/LangChain-LLM-blue)
+![Transformers](https://img.shields.io/badge/Transformers-HuggingFace-yellow)
+
 <h2>Приветствую вас! Я Полина, ваш нейро маркетолог.</h2>
 <p>Моя цель — помочь вашему бизнесу расти. Вместе мы сможем создать эффективные стратегии и достичь новых высот!</p>
 <img src="./confic/logo/resizedimage.jpg" alt="Логотип Полины, нейро маркетолога" style="max-width: 200px; display: block; margin-top: 10px;">
